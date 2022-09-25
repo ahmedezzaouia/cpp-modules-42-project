@@ -6,7 +6,7 @@
 /*   By: ahmez-za <ahmez-za@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 17:44:42 by ahmez-za          #+#    #+#             */
-/*   Updated: 2022/09/25 17:44:54 by ahmez-za         ###   ########.fr       */
+/*   Updated: 2022/09/25 18:59:35 by ahmez-za         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ std::string	Contact::getLastName(void)
 }
 std::string	Contact::setPhoneNumber(void)
 {
-    return (phoneNumber)
+    return (phoneNumber);
 }
 std::string	Contact::getSecret(void)
 {

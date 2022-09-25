@@ -6,7 +6,7 @@
 /*   By: ahmez-za <ahmez-za@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 16:55:25 by ahmez-za          #+#    #+#             */
-/*   Updated: 2022/09/25 17:57:47 by ahmez-za         ###   ########.fr       */
+/*   Updated: 2022/09/25 19:28:51 by ahmez-za         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #define PHONEBOOK_HPP
 
 #include<iostream>
-
+#include <iomanip>
 class Contact
 {
     public:
@@ -45,7 +45,7 @@ class PhoneBook
     public:
         Contact book[8];
         void    add(PhoneBook *book, int i);
-        void    search(PhoneBook *book);
+        void    search(PhoneBook *book, int length);
 };
 
 #endif
