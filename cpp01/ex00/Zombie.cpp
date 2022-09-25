@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   zombie.cpp                                         :+:      :+:    :+:   */
+/*   Zombie.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahmez-za <ahmez-za@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 22:50:33 by ahmez-za          #+#    #+#             */
-/*   Updated: 2022/09/25 23:19:14 by ahmez-za         ###   ########.fr       */
+/*   Updated: 2022/09/26 00:46:49 by ahmez-za         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,23 +17,12 @@ void Zombie::announce(void)
     std::cout << name <<": BraiiiiiiinnnzzzZ..." << std::endl <<std::endl;
 }
 
-Zombie::Zombie()
+Zombie::Zombie(std::string str)
 {
-    std::cout << name << std::endl;
+    name = str;
 }
 
 Zombie::~Zombie()
 {
     std::cout << name << std::endl;
-}
-
-
-void    Zombie::setName(std::string str)
-{
-    name = str;
-}
-
-std::string Zombie::getName()
-{
-    return (name);
 }
