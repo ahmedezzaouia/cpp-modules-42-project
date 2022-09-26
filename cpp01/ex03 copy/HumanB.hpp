@@ -1,7 +1,7 @@
 
 
 #ifndef HUMANB_HPP
-#define HUMANB_HPP
+#define HUMANB_APP
 
 
 #include "Weapon.hpp"
