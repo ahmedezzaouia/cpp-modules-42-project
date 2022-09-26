@@ -1,6 +1,6 @@
 #include "HumanB.hpp"
 
-HumanB::HumanB( std::string name)
+HumanB::HumanB( std::string name )
 {
     this->name = name;
     this->weapon = nullptr;
@@ -13,13 +13,10 @@ HumanB::~HumanB( void )
 void	HumanB::attack( void )
 {
 	if (this->weapon)
-	{
 		std::cout << this->name << " attacks with their " << this->weapon->getType()<< std::endl;
-	}
 	else
-	{
-		std::cout << this->name<< " can't attack >> human don't have a weapon" << std::endl;
-	}
+		std::cout << this->name<< " can't attack because they don't have a weapon" << std::endl;
+
 }
 
 Weapon&	HumanB::getWeapon( void )
@@ -27,12 +24,9 @@ Weapon&	HumanB::getWeapon( void )
 	return (*(this->weapon));
 }
 
-void	HumanB::setWeapon( Weapon& newWeapon )
+void	HumanB::setWeapon( Weapon& newW )
 {
-	if (newWeapon.getType() == "")
-	{
-		std::cout << "the new weapon can't be nothing" << std::endl;
-		exit (1);
-	}
-	this->weapon = &newWeapon;
+	if (newW.getType() == "")
+		std::cerr << "the weapon has an empty type" << std::endl;
+	this->weapon = &newW;
 }

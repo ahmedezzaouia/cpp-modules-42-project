@@ -10,11 +10,11 @@ class HumanB
 {
 
     public:
-        HumanB( std::string name );
-        ~HumanB( void );
-        void	attack( void );
-        void	setWeapon( Weapon& newWeapon );
-        Weapon&	getWeapon( void );
+        HumanB(std::string name);
+        ~HumanB(void);
+        void	setWeapon(Weapon& newWeapon);
+        Weapon&	getWeapon(void);
+        void	attack(void);
 
     private:
         std::string	name;
