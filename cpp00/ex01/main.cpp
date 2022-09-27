@@ -6,7 +6,7 @@
 /*   By: ahmez-za <ahmez-za@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 17:41:31 by ahmez-za          #+#    #+#             */
-/*   Updated: 2022/09/25 19:51:29 by ahmez-za         ###   ########.fr       */
+/*   Updated: 2022/09/27 23:12:51 by ahmez-za         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 std::string	fixW(std::string str)
 {
-	if (str.length() > 10)
+	if (str.length() > 9)
 		return (str.substr(0, 9) + ".");
 	else
 		return (str);
@@ -25,6 +25,7 @@ void		displayContact(PhoneBook *book, int i)
 	std::cout << "First name      : " << book->book[i].getFirstName() << std::endl;
 	std::cout << "Last name       : " << book->book[i].getLastName() << std::endl;
 	std::cout << "Nickname        : " << book->book[i].getNickName() << std::endl;
+	std::cout << "Secret          : " << book->book[i].getPhoneNumber() << std::endl;
 	std::cout << "Secret          : " << book->book[i].getSecret() << std::endl;
 
 }
@@ -43,25 +44,44 @@ void    search(PhoneBook *book, int length)
 	}
 	while (i < length)
 	{
-		std::cout << "*********************************************" << std::endl;
-		std::cout << "|" << std::setw(10) << i + 1;
+		std::cout << "****************************************************" << std::endl;
+		std::cout << "|" << std::setw(10) << i;
 		std::cout << "|" << std::setw(10) << fixW(book->book[i].getFirstName());
 		std::cout << "|" << std::setw(10) << fixW(book->book[i].getLastName());
 		std::cout << "|" << std::setw(10) << fixW(book->book[i].getNickName());
+		std::cout << "|" << std::setw(10) << fixW(book->book[i].getSecret());
 		std::cout << "|" << std::endl;
 		i++;
 	}
 	std::cout << "---------------------------------------------" << std::endl;
 	std::cout << "Select a Contact by it's Index" << std::endl;
 	getline(std::cin, selectedIndex);
-	if (selectedIndex[0] > '0' && selectedIndex[0] < '9' && selectedIndex[1] == '\0')
+	if ((selectedIndex[0] >= '0' && selectedIndex[0] <= '9' && selectedIndex[1] == '\0') && stoi(selectedIndex) > length - 1)
 	{
-		displayContact(book, stoi(selectedIndex) - 1);
+		std::cout << "Contact not Found" <<std::endl;
 	}
-	std::cout << std::endl;
+	else
+	{
+		if (selectedIndex[0] >= '0' && selectedIndex[0] <= '9' && selectedIndex[1] == '\0')
+		{
+			displayContact(book, stoi(selectedIndex));
+		}
+	}
+		std::cout <<std::endl <<std::endl;
+
 }
 
-
+bool is_digit(std::string phoneNumber)
+{
+	size_t i = 0;
+	while (i < phoneNumber.length())
+	{
+		if (!(phoneNumber[i] >= '0' && phoneNumber[i] <= '9'))
+			return (false);
+		i++;
+	}
+	return (true);
+}
 
 void	add(PhoneBook *book, int i)
 {
@@ -94,6 +114,20 @@ void	add(PhoneBook *book, int i)
 	}
 	book->book[i].setNickName(str);
 	
+	std::cout << "enter contact's phone number." << std::endl;
+	getline(std::cin, str);
+	while (str[0] == '\0')
+	{
+		std::cout << "enter contact's phone number." << std::endl;
+		getline(std::cin, str);
+	}
+	if (!is_digit(str))
+	{
+		std::cout << "can't get phone number" << std::endl;
+		exit(1);
+	}
+	book->book[i].setPhoneNumber(str);
+	
 	std::cout << "enter contact's secret." << std::endl;
 	getline(std::cin, str);
 	while (str[0] == '\0')
@@ -116,16 +150,17 @@ int main ()
 	{
         std::cout<< "choose one action (ADD, SEARCH, EXIT):"<< std::endl;
 		getline(std::cin, sdin);
+		if (sdin[0] == '\0')
+			break;
 		if (sdin == "SEARCH")
         {
 			search(&book, i);
         }
 		else if (sdin == "ADD")
 		{
-			if (i < 8)
-				add(&book, i++);
-			else
-				std::cout << "can't add this contact. more than 8 contacts" << std::endl;
+			if (i == 8)
+				i = 0;
+			add(&book, i++);
 		}
 		else if (sdin == "EXIT")
 			break;

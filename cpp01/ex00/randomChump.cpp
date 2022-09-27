@@ -6,7 +6,7 @@
 /*   By: ahmez-za <ahmez-za@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 22:31:15 by ahmez-za          #+#    #+#             */
-/*   Updated: 2022/09/25 22:55:28 by ahmez-za         ###   ########.fr       */
+/*   Updated: 2022/09/27 17:44:49 by ahmez-za         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 void randomChump(std::string name)
 {
-    Zombie *z;
-    z = newZombie(name);
-    z->announce();
+    Zombie z(name);
+    z.announce();
 }

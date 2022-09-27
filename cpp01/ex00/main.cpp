@@ -6,7 +6,7 @@
 /*   By: ahmez-za <ahmez-za@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 22:18:56 by ahmez-za          #+#    #+#             */
-/*   Updated: 2022/09/26 00:47:56 by ahmez-za         ###   ########.fr       */
+/*   Updated: 2022/09/27 17:46:03 by ahmez-za         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,8 @@ int main()
             std::cout<<"enter a name"<<std::endl;
        	    getline(std::cin, name);
             z = newZombie(name);
-            
+            z->announce();
+            delete z;
         }
         else if (fnindex[0] == '2')
         {

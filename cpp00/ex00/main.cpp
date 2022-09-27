@@ -6,7 +6,7 @@
 /*   By: ahmez-za <ahmez-za@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 21:18:42 by ahmez-za          #+#    #+#             */
-/*   Updated: 2022/09/25 21:31:20 by ahmez-za         ###   ########.fr       */
+/*   Updated: 2022/09/27 21:52:01 by ahmez-za         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,6 @@ int	main(int ac, char **av)
 			std::cout << c;
 		}
 		i++;
-		if (i < ac)
-			std::cout << " ";
 	}
 	std::cout << std::endl;
 	return (0);

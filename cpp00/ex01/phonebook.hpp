@@ -6,7 +6,7 @@
 /*   By: ahmez-za <ahmez-za@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 16:55:25 by ahmez-za          #+#    #+#             */
-/*   Updated: 2022/09/25 19:28:51 by ahmez-za         ###   ########.fr       */
+/*   Updated: 2022/09/27 21:54:49 by ahmez-za         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class Contact
         
         std::string	getFirstName(void);
         std::string	getLastName(void);
-        std::string	setPhoneNumber(void);
+        std::string	getPhoneNumber(void);
         std::string	getSecret(void);
         std::string	getNickName(void);
 

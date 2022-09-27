@@ -6,7 +6,7 @@
 /*   By: ahmez-za <ahmez-za@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 22:19:12 by ahmez-za          #+#    #+#             */
-/*   Updated: 2022/09/26 00:16:54 by ahmez-za         ###   ########.fr       */
+/*   Updated: 2022/09/27 17:50:05 by ahmez-za         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,8 @@ class Zombie {
     void announce(void);
     void setName(std::string str);
     std::string getName(void);
-    Zombie(void);
+    Zombie(std::string name);
+    Zombie();
     ~Zombie(void);
 
     private:

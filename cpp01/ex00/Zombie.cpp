@@ -6,7 +6,7 @@
 /*   By: ahmez-za <ahmez-za@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 22:50:33 by ahmez-za          #+#    #+#             */
-/*   Updated: 2022/09/26 00:46:49 by ahmez-za         ###   ########.fr       */
+/*   Updated: 2022/09/27 17:45:28 by ahmez-za         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,5 @@ Zombie::Zombie(std::string str)
 
 Zombie::~Zombie()
 {
-    std::cout << name << std::endl;
+    std::cout << name << "has been destroyed" <<std::endl;
 }
