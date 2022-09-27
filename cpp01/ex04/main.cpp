@@ -6,7 +6,7 @@
 /*   By: ahmez-za <ahmez-za@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/27 00:24:55 by ahmez-za          #+#    #+#             */
-/*   Updated: 2022/09/27 01:20:24 by ahmez-za         ###   ########.fr       */
+/*   Updated: 2022/09/27 01:57:24 by ahmez-za         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,8 @@ int main (int ac, char **av)
     {
         size_t index = line.find(s1);
         if (index != std::string::npos) {
-            ft_replace(s2, s1, &line, index);
+           line.erase(startIndex, s1.length());
+            line.insert(startIndex, s2);
         } 
         writefile << line + '\n';        
     }
