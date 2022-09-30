@@ -20,16 +20,16 @@ class Fixed
 	~Fixed();
 
 	Fixed& operator=(const Fixed &cop);
-	bool	operator==(Fixed const &f);
-	bool	operator!=(Fixed const &f);
-	bool	operator>(Fixed const &f);
-	bool	operator>=(Fixed const &f);
-	bool	operator<(Fixed const &f);
-	bool	operator<=(Fixed const &f);
-	Fixed	operator+(Fixed const &f);
-	Fixed	operator-(Fixed const &f);
-	Fixed	operator*(Fixed const &f);
-	Fixed	operator/(Fixed const &f);
+	bool	operator==(Fixed const &f) const;
+	bool	operator!=(Fixed const &f) const;
+	bool	operator>(Fixed const &f) const;
+	bool	operator>=(Fixed const &f) const;
+	bool	operator<(Fixed const &f) const;
+	bool	operator<=(Fixed const &f) const;
+	Fixed	operator+(Fixed const &f) const;
+	Fixed	operator-(Fixed const &f) const;
+	Fixed	operator*(Fixed const &f) const;
+	Fixed	operator/(Fixed const &f) const;
 	Fixed	&operator++(void);
 	Fixed	&operator--(void);
 	Fixed	operator++(int);

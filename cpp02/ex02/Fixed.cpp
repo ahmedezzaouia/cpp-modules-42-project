@@ -53,32 +53,33 @@ Fixed& Fixed::operator=(const Fixed &foper)
     return (*this);
 }
 
-bool	Fixed::operator==(Fixed const &f)
+bool	Fixed::operator==(Fixed const &f) const
 {
 	return (this->getRawBits() == f.getRawBits());
 }
 
-bool	Fixed::operator!=(Fixed const &f)
+bool	Fixed::operator!=(Fixed const &f) const
 {
 	return (this->getRawBits() != f.getRawBits());
 }
 
-bool	Fixed::operator>(Fixed const &f) 
+bool	Fixed::operator>(Fixed const &f) const 
 {
 	return (this->getRawBits() > f.getRawBits());
 }
 
-bool	Fixed::operator>=(Fixed const &f)
-{
-	return (this->getRawBits() >= f.getRawBits());
-}
-
-bool	Fixed::operator<(Fixed const &f)
+bool	Fixed::operator<(Fixed const &f) const
 {
 	return (this->getRawBits() < f.getRawBits());
 }
 
-bool	Fixed::operator<=(Fixed const &f)
+bool	Fixed::operator>=(Fixed const &f) const
+{
+	return (this->getRawBits() >= f.getRawBits());
+}
+
+
+bool	Fixed::operator<=(Fixed const &f) const
 {
 	return (this->getRawBits() <= f.getRawBits());
 }
@@ -112,25 +113,25 @@ Fixed	Fixed::operator--(int)
 	return (old);
 }
 
-Fixed Fixed::operator+(Fixed const &f)
+Fixed Fixed::operator+(Fixed const &f) const
 {
     Fixed res(this->toFloat() + f.toFloat());
 	return (res);
 }
 
-Fixed Fixed::operator-(Fixed const &f)
+Fixed Fixed::operator-(Fixed const &f) const
 {
 	Fixed res(this->toFloat() - f.toFloat());
     return (res);
 }
 
-Fixed Fixed::operator*(Fixed const &f)
+Fixed Fixed::operator*(Fixed const &f) const
 {
     Fixed res(this->toFloat() * f.toFloat());
     return (res);
 }
 
-Fixed Fixed::operator/(Fixed const &f)
+Fixed Fixed::operator/(Fixed const &f) const
 {
     Fixed res(this->toFloat() / f.toFloat());
     return (res);
