@@ -6,14 +6,14 @@
 #    By: ahmez-za <ahmez-za@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/25 18:56:36 by ahmez-za          #+#    #+#              #
-#    Updated: 2022/09/30 02:33:22 by ahmez-za         ###   ########.fr        #
+#    Updated: 2022/09/30 04:27:41 by ahmez-za         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRCS = main.cpp Fixed.cpp
 NAME = fixed
 CXX = c++
-CXXFLAGS = -Wall -Wextra -Werror  -std=c++98
+CXXFLAGS = -Wall -Wextra -Werror  -std=c++98  -fsanitize=address
 OBJS = $(SRCS:.c=.o)
 
 all: $(NAME)

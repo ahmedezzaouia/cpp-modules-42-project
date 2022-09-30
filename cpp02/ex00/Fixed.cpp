@@ -18,7 +18,7 @@ Fixed::~Fixed( void )
 }
 
 
-Fixed& Fixed::operator=(Fixed &foper)
+Fixed& Fixed::operator=(const Fixed &foper)
 {
     std::cout<<"Copy assignment operator called"<<std::endl;
 	if (this != &foper)
