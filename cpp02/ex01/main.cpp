@@ -1,30 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahmez-za <ahmez-za@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/25 22:19:12 by ahmez-za          #+#    #+#             */
-/*   Updated: 2022/09/27 23:14:42 by ahmez-za         ###   ########.fr       */
+/*   Created: 2022/09/30 02:33:37 by ahmez-za          #+#    #+#             */
+/*   Updated: 2022/09/30 02:33:38 by ahmez-za         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HPP
-#define ZOMBIE_HPP
 
-#include <iostream>
+#include "Fixed.hpp"
 
-class Zombie {
-    public:
-    void announce(void);
-    Zombie(std::string str);
-    ~Zombie(void);
-
-    private:
-        std::string name;
-};
-void randomChump(std::string name);
-Zombie  *newZombie( std::string name );
-
-#endif
+int main( void ) {
+    Fixed a;
+    Fixed b( a );
+    Fixed c;
+    c = b;
+    std::cout << a.getRawBits() << std::endl;
+    std::cout << b.getRawBits() << std::endl;
+    std::cout << c.getRawBits() << std::endl;
+    return(0);
+}
