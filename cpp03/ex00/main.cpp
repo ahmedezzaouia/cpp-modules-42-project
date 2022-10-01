@@ -5,24 +5,22 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahmez-za <ahmez-za@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/30 03:45:28 by ahmez-za          #+#    #+#             */
-/*   Updated: 2022/10/01 01:33:28 by ahmez-za         ###   ########.fr       */
+/*   Created: 2022/10/01 02:44:17 by ahmez-za          #+#    #+#             */
+/*   Updated: 2022/10/01 02:45:46 by ahmez-za         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Fixed.hpp"
 
-int main( void ) 
+#include "ClapTrap.hpp"
+
+
+int main ()
 {
-    Fixed a;
-    Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
-    std::cout << a << std::endl;
-    std::cout << ++a << std::endl;
-    std::cout << a << std::endl;
-    std::cout << a++ << std::endl;
-    std::cout << a << std::endl;
-    std::cout << b << std::endl;
-    std::cout << Fixed::max( a, b ) << std::endl;
-    std::cout << Fixed::min( a, b ) << std::endl;
-    return (0);
+    ClapTrap ahmed("ahmed");
+    ClapTrap amine("amine");
+
+
+    ahmed.attack("amine");
+    
+    
 }
