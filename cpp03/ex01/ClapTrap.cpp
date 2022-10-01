@@ -6,28 +6,26 @@
 /*   By: ahmez-za <ahmez-za@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/01 01:48:33 by ahmez-za          #+#    #+#             */
-/*   Updated: 2022/10/01 03:54:58 by ahmez-za         ###   ########.fr       */
+/*   Updated: 2022/10/01 23:18:14 by ahmez-za         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "ClapTrap.hpp"
 
 ClapTrap::ClapTrap(const std::string name):name(name),hitPoints(10),energyPoints(10),attackDamage(0)
 {
-    std::cout << this->name << " ClapTrap Constructor Called" << std::endl;
+    std::cout << this->name << " ClapTrap Name Constructor Called" << std::endl;
 }
 
 ClapTrap::ClapTrap(void):name("default"),hitPoints(10),energyPoints(10),attackDamage(0)
 {
-    std::cout << this->name << " ClapTrap Constructor Called" << std::endl;
+    std::cout << this->name << " ClapTrap Default Constructor Called" << std::endl;
 }
 
 ClapTrap::ClapTrap(const ClapTrap &rhs)
 {
     *this = rhs;
     std::cout << "ClapTrap " << this->name << " copied with copy constuctor." << std::endl;
-
 }
 
 ClapTrap::~ClapTrap() {
@@ -97,6 +95,6 @@ void ClapTrap::takeDamage(unsigned int amount)
         if ((amount > (unsigned int)this->hitPoints))
             amount = this->hitPoints;
         this->hitPoints -= amount;
-        std::cout <<  "ClapTrap " << this->name << " has taken " << amount << " damage" << std::endl;
+        std::cout << "ClapTrap " << this->name << " has taken " << amount << " damage" << std::endl;
     }
 }
