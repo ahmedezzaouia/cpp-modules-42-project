@@ -10,9 +10,6 @@ ScavTrap::ScavTrap()
 	this->hitPoints = 20;
 }
 
-ScavTrap::~ScavTrap() {
-	std::cout<< "ScavTrap destroyed" << std::endl;
-}
 
 ScavTrap::ScavTrap(std::string name) {
 	std::cout <<"ScavTrap " <<this->name<<" Constructor Clalled" << std::endl;
@@ -20,6 +17,10 @@ ScavTrap::ScavTrap(std::string name) {
 	this->hitPoints = 100;
 	this->energyPoints = 50;
 	this->hitPoints = 20;
+}
+
+ScavTrap::~ScavTrap() {
+	std::cout<< "ScavTrap destroyed" << std::endl;
 }
 
 ScavTrap::ScavTrap(const ScavTrap &rhs)
