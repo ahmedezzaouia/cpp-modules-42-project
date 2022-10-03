@@ -16,11 +16,11 @@ FragTrap::~FragTrap() {
 }
 
 FragTrap::FragTrap(std::string name) {
-	std::cout <<"FragTrap " <<this->name<<" Constructor Clalled" << std::endl;
 	this->name = name;
 	this->hitPoints = 100;
 	this->energyPoints = 100;
     this->attackDamage = 30;
+	std::cout <<"FragTrap " <<this->name<<" Constructor Clalled" << std::endl;
 }
 
 FragTrap::FragTrap(const FragTrap &rhs)
