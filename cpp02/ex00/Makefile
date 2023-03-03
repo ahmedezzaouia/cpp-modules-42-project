@@ -14,7 +14,7 @@ SRCS = main.cpp Fixed.cpp
 NAME = fixed
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror  -std=c++98
-OBJS = $(SRCS:.c=.o)
+OBJS = $(SRCS:.cpp=.o)
 
 all: $(NAME)
 
