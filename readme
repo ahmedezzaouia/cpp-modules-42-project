@@ -1,19 +1,1 @@
-https://stackoverflow.com/questions/1083215/returning-c-stack-variable
 
-## videos:
-<a href="https://www.youtube.com/watch?v=W3kpFSbkqQ8&list=PLk6CEY9XxSICITtoUG_mJIBShyIYpeaoi&ab_channel=CppNuts">Youtube Playlist</a>
-
-## Articles:
-https://www.g<a href="https://www.geeksforgeeks.org/order-constructor-destructor-call-c/">Order of Constructor/ Destructor Call in C++</a>
-
-https://medium.com/@amarpreet.sahani/virtual-functions-and-polymorphism-in-c-f3b0e116b4f1
-https://beginnersbook.com/2013/05/method-overloading/
-https://stackoverflow.com/questions/5406533/overloading-vs-overriding
-
-
-#### polymorphism vs Inheritance
-    Inheritance is creating a class that derives its feature from an 
-    already existing class. On the other hand, polymorphism is an
-    interface that can be defined in multiple forms.
-    
-    https://www.codingpanel.com/c-virtual-constructor/
