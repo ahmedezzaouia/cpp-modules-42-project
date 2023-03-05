@@ -10,11 +10,11 @@
 #                                                                              #
 # **************************************************************************** #
 
-SRCS = main.cpp Animal.cpp Cat.cpp Dog.cpp brain.cpp
-NAME = animal
+SRCS = main.cpp Animal.cpp Cat.cpp Dog.cpp Brain.cpp
+NAME = Polymorfism
 CXX = c++
-CXXFLAGS = -Wall -Wextra -Werror  -std=c++98
-OBJS = $(SRCS:.c=.o)
+CXXFLAGS = -Wall -Wextra -Werror  -std=c++98 -fsanitize=address
+OBJS = $(SRCS:.cpp=.o)
 
 all: $(NAME)
 

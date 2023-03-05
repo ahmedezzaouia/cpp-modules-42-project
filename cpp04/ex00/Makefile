@@ -11,7 +11,7 @@
 # **************************************************************************** #
 
 SRCS = main.cpp Animal.cpp Cat.cpp Dog.cpp WrongAnimal.cpp WrongCat.cpp
-NAME = animal
+NAME = Polymorfism
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror  -std=c++98  -fsanitize=address
 OBJS = $(SRCS:.cpp=.o)
