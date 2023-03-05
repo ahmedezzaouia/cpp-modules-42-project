@@ -9,6 +9,7 @@ Form::Form(std::string name, int gradetoSign, int gradetoExecute)
 	this->sign = 0;
 	this->gradeToSign = gradetoSign;
 	this->gradeToExecute = gradetoExecute;
+    std::cout << this->name << " construct called"<< std::endl;
 }
 
 
@@ -19,7 +20,7 @@ Form::Form(Form const &fr)
 }
 
 Form::~Form() { 
-    std::cout << "Form " << this->name << "destructor called" << std::endl;
+    std::cout << "Form " << this->name << " destructor called" << std::endl;
 }
 
 Form &Form::operator=(Form const &fr)
@@ -34,9 +35,7 @@ Form &Form::operator=(Form const &fr)
 
 int	Form::beSigned(Bureaucrat &br)
 {
-	if (this->sign == 1)
-		return 0;
-	else if(br.getGrade() > this->gradeToSign)
+	if(br.getGrade() > this->gradeToSign)
 	{
 		std::cout << br.getName() << " couldn’t sign " << this->name << " because grade is too low." << std::endl;
 		throw GradeTooLowException();

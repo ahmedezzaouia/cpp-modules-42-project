@@ -10,7 +10,7 @@ Bureaucrat::Bureaucrat(std::string name, int grade) : name(name){
 }
 
 Bureaucrat::~Bureaucrat() { 
-    std::cout << "destructor called" << std::endl;
+    std::cout << this->name << " destructor called"<< std::endl;
 }
 
 Bureaucrat::Bureaucrat(Bureaucrat const &br){
@@ -58,10 +58,14 @@ void Bureaucrat::checkGarde() {
 
 void	Bureaucrat::signForm(Form &form)
 {
-	if (form.beSigned(*this))
+	if (form.getsign()){
+	    std::cout << this->name << " already signed " << form.getname() << std::endl;
+	}
+	else if (form.beSigned(*this))
+	{
 		std::cout << this->name << " signed " << form.getname() << std::endl;
-	else
-		std::cout << this->name << " already signed." << std::endl;
+	}
+	
 
 }
 

@@ -1,5 +1,11 @@
 {
     "files.associations": {
+        "*.json.liquid": "json",
+        "*.yaml.liquid": "yaml",
+        "*.md.liquid": "markdown",
+        "*.js.liquid": "liquid-javascript",
+        "*.css.liquid": "liquid-css",
+        "*.scss.liquid": "liquid-scss",
         "ostream": "cpp",
         "__bit_reference": "cpp",
         "__config": "cpp",
@@ -63,6 +69,7 @@
         "iomanip": "cpp",
         "fstream": "cpp",
         "deque": "cpp",
-        "stack": "cpp"
+        "stack": "cpp",
+        "filesystem": "cpp"
     }
 }
