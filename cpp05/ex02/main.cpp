@@ -27,9 +27,9 @@ int	main(void)
 	Bureaucrat	*buro1 = new Bureaucrat("amine", 40);
 	Bureaucrat	*buro2 = new Bureaucrat("Nabile", 75);
 
-	AForm	*shrubbery = new ShrubberyCreationForm("shrubbery_from");
-	AForm	*robotomy = new RobotomyRequestForm("robotomy_form");
-	AForm	*president = new PresidentialPardonForm("president_form");
+	AForm	*shrubbery = new ShrubberyCreationForm("home");
+	AForm	*robotomy = new RobotomyRequestForm("contact");
+	AForm	*president = new PresidentialPardonForm("about");
 
 	DoForm(*buro, *shrubbery);
 	DoForm(*buro, *robotomy);
