@@ -1,5 +1,5 @@
    
-#include "Form.hpp"
+#include "AForm.hpp"
 #include "Bureaucrat.hpp"
 
 
@@ -56,7 +56,7 @@ void Bureaucrat::checkGarde() {
     }
 }
 
-void	Bureaucrat::signForm(Form &form)
+void	Bureaucrat::signForm(AForm &form)
 {
 	if (form.getsign()){
 	    std::cout << this->name << " already signed " << form.getname() << std::endl;
@@ -67,6 +67,18 @@ void	Bureaucrat::signForm(Form &form)
 	}
 	
 
+}
+
+void	Bureaucrat::executeForm(AForm const &form)
+{
+	if (form.getsign() == 0)
+	{
+		std::cout << form.getname() << " Couldn’t execute  because is not signed." << std::endl;
+	}
+	else if (form.execute(*this))
+	{
+		std::cout << this->name << " executed " << form.getname() << std::endl;
+	}
 }
 
 std::ostream &operator<<(std::ostream &out, Bureaucrat &br){

@@ -10,8 +10,8 @@
 #                                                                              #
 # **************************************************************************** #
 
-SRCS = main.cpp Bureaucrat.cpp Form.cpp
-NAME = Form
+SRCS = main.cpp Bureaucrat.cpp Form.cpp PresidentialPardonForm.cpp RobotomyRequestForm.cpp ShrubberyCreationForm.cpp
+NAME = AForm
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror  -std=c++98 
 OBJS = $(SRCS:.cpp=.o)

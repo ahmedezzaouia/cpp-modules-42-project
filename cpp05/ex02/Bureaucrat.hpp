@@ -2,9 +2,9 @@
 # define BUREAUCRAT_HPP
 
 #include <iostream>
-#include "Form.hpp"
+#include "AForm.hpp"
 
-class Form;
+class AForm;
 
 
 class Bureaucrat{
@@ -35,7 +35,9 @@ class Bureaucrat{
             const char * what() const throw () { return "Grade too low";};
         };
 
-        void	signForm(Form &form);
+        void	signForm(AForm &form);
+        void	executeForm(AForm const &form);
+
 
     private:
         std::string	name;
