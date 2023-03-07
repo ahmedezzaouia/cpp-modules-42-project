@@ -1,5 +1,6 @@
 #include "Cat.hpp"
 #include "Brain.hpp"
+#include "Animal.hpp"
 
 Cat::Cat() {
 	this->type = "Cat";
@@ -7,8 +8,7 @@ Cat::Cat() {
 	this->brain = new Brain();
 }
 
-Cat::Cat(const Cat& cat) {
-	*this = cat;
+Cat::Cat(const Cat& cat):Animal(cat) {
 	std::cout << "Cat Copy constructor" << std::endl;
 }
 

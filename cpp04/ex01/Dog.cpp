@@ -1,5 +1,6 @@
 #include "Dog.hpp"
 #include "Brain.hpp"
+#include "Animal.hpp"
 
 
 Dog::Dog() {
@@ -8,8 +9,7 @@ Dog::Dog() {
 	this->brain = new Brain();
 }
 
-Dog::Dog(const Dog& dog) {
-	*this = dog;
+Dog::Dog(const Dog& dog):Animal(dog) {
 	std::cout << "Dog Copy constructor" << std::endl;
 }
 
