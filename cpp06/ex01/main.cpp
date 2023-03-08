@@ -6,7 +6,7 @@ int main()
 	Data*	data = new Data;
 	Data	*res;
 
-	data->value = 50;
+	data->value = "ahmed";
 
 	uintptr_t ptr = Serializer::serialize(data);
 

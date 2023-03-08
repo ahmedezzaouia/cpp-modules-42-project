@@ -1,18 +1,12 @@
 
 #include "serialize.hpp"
 
-uintptr_t Serializer::serialize(Data *d)
+uintptr_t Serializer::	serialize(Data *ptr)
 {
-	uintptr_t	ret;
-
-	ret = d->value;
-	return (ret);
+	return reinterpret_cast<uintptr_t>(ptr);
 }
 
-Data* Serializer::deserialize(uintptr_t u)
+Data	*Serializer::deserialize(uintptr_t raw)
 {
-	Data	*ret = new Data;
-
-	ret->value = u;
-	return (ret);
+	return reinterpret_cast<Data *>(raw);
 }

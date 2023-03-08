@@ -1,13 +1,13 @@
 #ifndef SERIALIZE_HPP
 # define SERIALIZE_HPP
+#include <string>
 
 #include <cstdint>
 
-typedef struct t_data
-{
-	int		value;
-}	Data;
-
+class Data {
+	public:
+		std::string value;
+};
 
 class Serializer{
 public:
