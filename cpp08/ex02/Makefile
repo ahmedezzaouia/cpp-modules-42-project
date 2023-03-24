@@ -10,8 +10,8 @@
 #                                                                              #
 # **************************************************************************** #
 
-SRCS = main.cpp 
-NAME = Easyfind
+SRCS = main.cpp
+NAME = SpanMutantStack
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror  -std=c++98 
 OBJS = $(SRCS:.cpp=.o)
